@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/AnsattStyling/ansatt(kunde-hendelser).css">
+    
+     <link href="https://fonts.googleapis.com/css?family=Alata|IBM+Plex+Sans:100&display=swap" rel="stylesheet"> 
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <title>Studentklinikken</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!--Left side background  -->
+        <div class="col-left">
+            <div class="container menu">
+                <img src="/Bilder/helene.hansen.lian_-595x530.jpg" id="profile" class="rounded-circle" alt="Cinque Terre">
+                <h1 id="bg_title">Helene. K</h1>
+                <!-- A vertical navbar -->
+                <nav class="navbar">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AnsattSide/ansatt(dashbord).html">Dashbord</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="time-active" href="#">Timeliste</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AnsattSide/ansatt(kunder).html">Kunder</a>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AnsattSide/ansatt(profil).html">Profil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AnsattSide/ansatt%20(home).html">Log out</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+
+        <div class="bg_right">
+            <div class="container top">
+                <h1 id="bg_title_2">Studentklinikken | Ansatt</h1>
+                <img src="/Bilder/HK_Logo_icon_2.png" id="hk-logo" class="rounded-circle" alt="Cinque Terre">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="container object">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AnsattSide/ansatt(timeliste).html">Timeliste</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/AnsattSide/ansatt(kunde-hendelser).html">Kunde-hendelser</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="nav-active" href="#">Historikk</a>
+                    </li>
+                </ul>
+                                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="table-header">#</th>
+                            <th scope="col" class="table-header" colspan="2">Kunde</th>
+                            <th scope="col" class="table-header">Type</th>
+                            <th scope="col" class="table-header">Dato</th>
+                            <th scope="col" class="table-header">Status</th>
+                            <th scope="col" class="table-header">Handling</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr  class='clickable-row' data-toggle="modal" data-target="#exampleModal">
+                            <th scope="row">1</th>
+                            <td><img src="/Bilder/Deafult-Profile.png" alt="Avatar" class="kunde-bilde"></td>
+                            <td class="kunde">Vera Klang</td>
+                            <td>Osteopati</td>
+                            <td>03.12.2018</td>
+                            <td id="status">Ferdig</td>
+                            <td><button type="button" class="btn btn-outline-danger btn-sm delete"><i class="fas fa-exclamation-circle"></i> Slett</button></td>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Kunde</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="/Bilder/vwang.jpg" class="img-fluid" alt="Responsive image">
+                                            <h2 id="modal-text">Vera Klang</h2>
+                                            <p id="modal-text">Vært medlem av studentklinikken siden 2015.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr  class='clickable-row' data-toggle="modal" data-target="#exampleModal2">
+                            <th scope="row">2</th>
+                            <td><img src="/Bilder/Deafult-Profile.png" alt="Avatar" class="kunde-bilde"></td>
+                            <td class="kunde">Ryan Garcia</td>
+                            <td>Osteopati</td>
+                            <td>12.05.2018</td>
+                            <td id="status-historikk_2">Kansellert</td>
+                            <td><button type="button" class="btn btn-outline-danger btn-sm delete"><i class="fas fa-exclamation-circle"></i> Slett</button></td>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="/Bilder/DeaZ-6fV0AIhFnc.jpg" class="img-fluid" alt="Responsive image">
+                                            <h2 id="modal-text">Ryan Garcia</h2>
+                                            <p id="modal-text">Ikke medlem av studentklinikken.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                        <tr  class='clickable-row' data-toggle="modal" data-target="#exampleModal3">
+                            <th scope="row">3</th>
+                            <td><img src="/Bilder/Deafult-Profile.png" alt="Avatar" class="kunde-bilde"></td>
+                            <td class="kunde">Emil Halvorsen</td>
+                            <td>Kostholdveiledning</td>
+                            <td>01.03.2013</td>
+                            <td id="status">Ferdig</td>
+                            <td><button type="button" class="btn btn-outline-danger btn-sm delete"><i class="fas fa-exclamation-circle"></i> Slett</button></td>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="/Bilder/bilde.php.jpg" class="img-fluid" alt="Responsive image">
+                                            <h2 id="modal-text">Emil Halvorsen</h2>
+                                            <p id="modal-text">Vært medlem av studentklinikken siden 2011.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="/Pages/ansatt.js"></script>
+
+    </div>
+</body></html>

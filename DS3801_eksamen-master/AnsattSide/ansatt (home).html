@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.js"></script>
+    
+     <link href="https://fonts.googleapis.com/css?family=Alata|IBM+Plex+Sans:100&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/AnsattStyling/ansatt.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>Studentklinikken</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Left side background  -->
+        <div class="col_left">
+            <div class="container">
+                <img src="/Bilder/HK_Logo_icon_2.png" id="logo_img">
+                <h1>Studentklinikken</h1>
+                <h2 id="col_left_h2">Ansatt</h2>
+            </div>
+        </div>
+        <!--right side background  -->
+        <div class="col_right">
+            <div class="container">
+                <h2 id="info">Velkommen tilbake</h2>
+                <h4 id="info2">Log in for å få oversikt over egen timeliste, kunde-hendelser, tidligere behandlinger og ledige tider</h4>
+                <form>
+                    <div class="input-group" id="input_group1">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    </div>
+                    <div class="input-group" id="input_group2">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <a href="/AnsattSide/ansatt(dashbord).html" class="btn btn-info" id="log_in_button" role="button">Log in</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    !-- JS function for sidebar active -->
+    <script src="Pages/ansatt.js"></script>
+</body></html>
